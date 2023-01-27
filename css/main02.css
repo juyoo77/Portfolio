@@ -1,0 +1,491 @@
+@charset "utf-8";
+
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+
+@font-face {
+    font-family: 'SUNMOONUNIVERSITY';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/SUNMOONUNIVERSITY.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'NanumSquare';
+    font-weight: 400;
+}
+
+/* 🟡heaher : 상단헤더 */
+header {
+    height: 130px;    
+}
+header .inner {
+    height: 100%; /* 메뉴글씨 수직가운데정렬 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .inner ul li {
+    display: inline-block; /* 메뉴글씨 가로정렬 */
+}
+header .inner nav ul li {
+    font-size: 19px;
+    margin: 0 35px;  
+}
+header .inner .right_menu li img {
+    vertical-align: middle; /* 아이콘이미지 세로로 중앙정렬 */
+}
+header .inner .right_menu li:nth-child(1) {
+    margin-right: 20px;
+}
+
+/* 🟡 글씨 좌측으로 움직이기 */
+.cont01 {
+    padding: 50px 0;
+}
+.cont01 h3 {
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1px rgba(83, 169, 226, 0.658);
+    white-space: nowrap; /* 🟡글씨를 한줄로 나열됨 */
+    animation: text 50s infinite linear; /* 60초동안 무한으로 일정한 속도로 진행 */
+}
+@keyframes text { /* 🔶글씨가 좌측으로 이동됨 */
+    0% { 
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* 🟡 main_visual : 메인이미지 */
+.main_visual {
+    width: calc(100% - 200px); /* 이미지 좌우 여백주기, 빼기할때 좌우 띄어쓰기 */
+    height: calc(100vh - 100px);
+    /* margin: 0 auto;  *//* 이미지가운데 정렬 */        
+}
+.main_visual img { /* 사이즈설정된 크기로 조절하기 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    color: rgb(192, 185, 185);
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    color:  rgb(192, 185, 185);
+}
+
+
+/* 🟡video : 영상편집·모션그래픽 */
+.video {
+    padding: 130px 0;   
+    background-color: ;  
+}
+.video .inner {
+    width: 1440px;
+    height: 1000px;
+    padding: 33px;
+    background: url('../img/1-2.jpg') 0 0 / 100% 100% no-repeat; 
+    /* 유튜브영상 바탕에 모니터 이미지넣기 */
+
+}
+
+.video .tab_menu li {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    margin-right: 20px;
+    background-color:#ffbba1;
+    border-radius: 10px;
+    padding: 5px;
+}
+.video .tab_menu li.on { /* 글씨위에 점이 생긴다 */
+    position: relative;
+    color: #333;
+   
+}
+.video .tab_menu li.on::before { /* 글씨위에 점생기게 하기 */
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgb(22, 22, 22); /* 점 색상바꾸기 */
+    display: block;
+    position: absolute;
+    top: -10px; /* 점이 위로 이동 */
+    left: 50%;
+    transform: translateX(-50%);
+}
+.video .list {
+    padding-top: 100px;
+    
+}
+.video .list .list_in { /* 두번째 유튜브영상 설정  */
+    display: none;
+}
+.video .list .list_in.on { /* 두번째 유튜브영상 설정  */
+    display: block;
+}
+.video .list .list_in .swiper-slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.video .list .list_in .swiper-slide {
+
+}
+.video .list .list_in .swiper-slide .youtube_wrap {
+    width: 60%;
+}
+.video .list .list_in .swiper-slide .youtube_wrap .youtube {
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.video .list .list_in .swiper-slide .youtube_wrap .youtube iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.video .list .list_in .swiper-slide .info {
+    width: 40%;
+    padding-left: 50px;
+}
+.video .list .list_in .swiper-slide .info h4 {
+    font-size: 25px;
+}
+.video .list .list_in .swiper-slide .info p {
+    margin: 10px 0 20px;
+    border-bottom: 1px solid #999;
+    padding-bottom: 20px;
+}
+.video .list .list_in .swiper-slide .info dl {
+    display: flex;
+    margin-bottom: 20px;
+}
+.video .list .list_in .swiper-slide .info dl dt {
+    width: 90px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+.video .list .list_in .swiper-slide .info dl dd {
+    width: 440px;
+    line-height: 1.5;
+}
+.video .list .list_in .swiper-slide .info .btn {
+    margin-top: 120px; 
+}
+
+
+/* 슬라이드 버튼, 페이징 위치 변경 */
+.video .list {
+    position: relative;
+}
+.video .swiper { 
+    position: static;
+}
+.video .swiper-button-next { /* 화살표 위치설정 */
+    top: 50px;
+    right: auto;
+    left: 60px;
+    margin-top: 0;
+}
+.video .swiper-button-prev {
+    top: 50px;
+    right: auto;
+    left: 0px;
+    margin-top: 0;
+}
+.video .swiper-pagination {
+    bottom: auto;
+    top: 62px;
+    width: auto;
+    left: 23px;
+}
+
+/* 🟡.web : 웹디자인·웹퍼블리싱 */
+.web {
+    padding: 210px 0;
+    /* background-color: tan; */
+    background: url('../img/1-4.gif') 0 0 / 100% 100% no-repeat;
+}
+.web .title { /* 글씨가운데 */
+    text-align: center;
+}
+.web .list { /* 가로정렬 */
+    display: flex;
+    justify-content: center;
+        
+}
+.web .list .item {
+    width: calc(100% / 3 - 15px); /* 3가지 들어갈수 있도록 */
+    margin: 0 25px; /* 박스사이 여백주기 */
+        
+}
+.web .list .item figure {
+    width: 100%;
+    height: 370px; 
+    overflow: hidden;/* 안에서 이미지확대 */
+    border-radius: 13px 13px 0 0 ;
+}
+
+.web .list .item figure img { /* 이미지가 설정한 사이즈에 맞게하기 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc; /* 이미지아래 가로선주기 */
+    border-radius: 13px 13px 0 0;
+        
+}
+.web .list .item:hover img { 
+    transform: scale(1.2); /* 이미지에 마우스를 올리면 확대하기 */
+    transition: 0.7s; 
+    
+}
+.web .list .item .info {
+    background-color: #fff;
+    padding: 40px; /* 사방여백 40주기 */
+    border-radius: 0 0 13px 13px;
+}
+.web .list .item .info h4 {
+    font-size: 25px;
+}
+.web .list .item .info p {
+    font-size: 14px;
+    line-height: 1.3;/* 글자사이간격 */
+    margin: 8px 0 20px; /* 위,옆,아래 여백주기 */    
+}
+.web .list .item .info dl {
+    display: flex; /* 글씨가로정렬 */
+    margin-bottom: 10px;
+}
+.web .list .item .info dl dt {
+    margin-right: 20px;
+    font-weight: bold;
+}
+.web .list .item .info .btn {
+    margin-top: 40px;
+}
+.web .list .item .info .btn li {
+    font-size: 14px;    
+}
+
+
+/* 🟡 graphic : 그래픽디자인 */
+.graphic {
+    padding: 130px 0; /* 하단 여백주기 */
+    /* background-color: #d8d6d6; */ /* 그래픽바탕 색상 */
+}
+.graphic .title {
+    text-align: center;    
+}
+.graphic .list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* 5개에 아이템을 하나를 밑으로 떨어지게 하기 */
+}
+.graphic .list .item {    
+    width: calc(100% / 4 - 5px); /* 아이템5개가 4개를 가로로 넣고 나머지는 밑으로 떨어지게 */
+    margin-bottom: 70px; /* 박스이미지 세로여백주기 */
+    margin-left: 7px;
+}
+.graphic .list .item figure { /*마우스올리면 이미지 확대  */
+    overflow: hidden;
+    border-radius: 10px 10px 0 0 ;
+}
+.graphic .list .item:hover img {
+    transform: scale(1.2); /* 이미지에 마우스를 올리면 확대하기 */
+    transition: 0.7s; 
+}
+.graphic .list .item a img {
+    height: 400px; 
+    width: 100%;
+    object-fit: cover; /* 이미지 사이즈설정에 비율맞게 적용하기 */
+    border-radius: 10px 10px 0 0 ;
+}
+.graphic .list .item .info h4 {/*🔶이미지밑에 박스제목설정 */
+    margin: 15px 0 10px;
+    font-size: 20px;   
+    background-color: #0707076b; /* 제목'글씨박스' 색상 */
+    padding: 7px;
+    text-align: center;
+    border-radius: 0 0 10px 10px ;
+    color: #fff;
+    font-weight: 400;
+}
+
+
+
+/* 🟡모바일 디자인 */
+.cont01 .inner {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;    
+}
+.cont01 .inner figure { 
+    width: 1440px;
+    height: 630px;
+    background: url('../img/mobile02.png') 0 0 / 100% 100% no-repeat;
+    overflow: hidden; /* 🔶안에 이미지 모바일안으로 넣기 */
+    border-radius: 30px;/* 🔶안에 이미지 모서리라운드 */
+}
+.cont01 .inner figure img {
+    width: 40%;
+    position: relative;
+    top: 20px;
+    left: 420px;
+    z-index: -1;
+    
+}
+.cont01 .inner figure:hover img{
+    animation: slide 30s infinite linear;
+
+}
+@keyframes slide { /* 🔶마우스올리면 안에 이미지가 위로 올라간다 */
+    0% { 
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+
+/* 🟡움직이는 손가락 */
+.ball { 
+    margin-top: 500px;
+    margin-left: -600px;
+    animation: ball 2s infinite alternate linear;
+    /* 애니메이션: 이름 실행시간, 실행횟수(횟수와 무한반복),  방향 속도 
+    ball(이름넣기), 2s는(2초), infinite(무한반복), alternate(역방향진행) */
+}
+
+@keyframes ball { /* 🟡🔶애니가 진행되게 하는것 */
+    0% {
+        /* background-color: rgb(255, 255, 255); */
+    }  
+    50% {
+        transform: translate(100px, -100px); /* 🔶위, 아래로 이동됨*/
+    }  
+    100% {
+        
+        border-radius: 0;
+        /* background-color: blueviolet; */
+    }
+} 
+
+
+
+
+/* 🟡 profile : 나의소개 */
+.profile {
+    padding: 180px 0;
+    /* background-color: tan; */
+    background: url('../img/1-5-02.jpg') 0 0 / 100% 100% no-repeat;
+}
+.profile .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+.profile .list figure { /* 사진사이즈 */
+    width: 300px;
+    height: 300px;    
+}
+.profile .list figure img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+.profile .title h2 {
+    font-family: 'SUNMOONUNIVERSITY';   
+    font-weight: 100;
+    text-align: left;
+    font-size: 45px;    
+}
+.profile .title h2::after {
+    content: '';
+    width: 80px;
+    height: 2px;
+    background-color: #028ae4;
+    display: block; /* 이 영역안에 '지정한 색상 라인선'이 나타남 */
+    margin: 0 45px 16px;/* 가운데 정렬 */
+    margin-top: 10px;
+} 
+.profile .title p {
+    text-align: left;
+}
+.profile .list .info {
+    width: 1000px;
+    padding-left: 100px;
+    font-weight: 100;
+}
+.profile .list .info ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 19px;
+    margin: 10px 0; 
+    padding: 7px;   
+}
+.profile .list .info ul li strong {
+    width: 180px;
+    display: inline-block;
+    font-weight: 500;     
+}
+.profile .list .info .skill {
+    margin-top: 40px;
+}
+.profile .list .info .skill li {
+    height: 40px;
+    line-height: 40px;
+    border-radius: 40px;
+    background-color: rgba(15, 15, 15, 0.473);
+    color: #fff;
+    font-size: 15px;
+    margin: 10px; /* 상,하여백 */
+    padding: 0 30px; /* 좌,우밖에 여백 */
+}
+.profile .list .info .skill li.w { /* 다른색상넣기 */
+    background-color: #ffbca19f;
+    color: #333;
+    font-weight: 500;
+}
+
+
+/* 🟡footer : 푸터는 태그이기 때문에 점을 붙이지 않는다 */
+footer {
+    padding: 70px 0;
+    background-color: #ffbba1;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+footer ul {
+    margin-bottom: 40px;
+}
+footer ul li {
+    height: 50px;
+    width: 200px;
+    line-height: 50px;
+    background-color: rgba(255, 255, 255, 0.596);
+    color: #333;
+    border-radius: 15px;
+    margin: 10px auto; 
+        
+}   
+footer ul li a {
+    display: block; /* 전체 버튼에서 손모양나오게 하기 */
+}
+footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.664);
+}
+
