@@ -483,8 +483,22 @@ footer ul li a {
 }
 footer p {
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 1px;
     line-height: 1.4;
     color: rgba(255, 255, 255, 0.664);
 }
 
+h5 {/* TOP 전화번호 적용 */
+    width: 100PX;
+    height: 100PX;
+    background-color: rgba(0, 0, 0, 0.244);
+    color: #fff;
+    border-radius: 50%; /* 원형 만들기 */
+    text-align: center;
+    line-height: 100px;
+    position: fixed; /* 🔸브라우저에서 고정되는 것 */
+    bottom: 0px; /* 🔸position: fixed; 설정 후 방향을 설정해줘야 한다 무조건 */
+    left: 0px; /* 방향을 설정해줘야 한다 */
+    /*🔸 방향을 설정을 안하면, 안보여진다 */
+    /* top, left, right, botoom 중에서 방향 설정해야된다*/
+}
